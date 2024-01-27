@@ -2,3 +2,5 @@
 /.idea/PokemonSocketFront.iml
 /.idea/vcs.xml
 /.idea/modules.xml
+/node_modules/
+/.idea/.gitignore

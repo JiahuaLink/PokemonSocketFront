@@ -31,7 +31,8 @@ export default {
       currentUsers: [],
       newRoomName: '',
       gameStarted: false,
-      chatMessages:[]
+      chatMessages:[],
+      messageInput:''
     };
   },
   mounted() {
@@ -55,6 +56,7 @@ export default {
     },
     leaveRoom() {
       socket.emit('leave_room', this.currentRoomName);
+
     },
     startGame() {
       socket.emit('start_game', this.currentRoomName);
@@ -72,6 +74,7 @@ export default {
     },
   },
   sockets: {
+
     chat_message(data){
       this.chatMessages.push({ sender: data.sender, content: data.content });
     },
